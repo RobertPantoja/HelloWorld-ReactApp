@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #292929;
+  background-color: #dcdcdc;
 }
 
 code {
@@ -19,6 +21,7 @@ code {
   display: grid;
   place-items: center;
   text-align: center;
+
 }
 
 .title {
@@ -26,5 +29,9 @@ code {
   font-weight: 800;
   line-height: 1em;
   font-size: min(12vw, 200px);
-  color: black;
+}
+
+.dark {
+  color: #dcdcdc;
+  background-color: #292929;
 }

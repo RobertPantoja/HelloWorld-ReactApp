@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Button } from '@mui/material';
 
+export default function DarkMode() {
+  const [isClicked, setIsClicked] = useState(false)
+  function Toggle1() {
+    let element = document.body;
+    element.classList.toggle("dark");
+    setIsClicked(isClicked => !isClicked);
+  }
 
-export default function HelloWorld() {
+  return ( 
+    <Button variant='contained' size='large' className='button' onClick={Toggle1}>
+      Dark Mode: {isClicked ? "ON" : "OFF"} 
+      </Button> 
+  )
+}
+
+
+function HelloWorld() {  
   return (
   <div className='content'>
     <h1 className='title'>Hello, World!</h1>
-    <Button variant='contained' size='large' className='button'>Welcome to my App</Button>
+    <DarkMode/>
   </div>
   )
-  
 }
+
+let element = document.body;
+element.classList.toggle("dark")
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
