@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Button } from '@mui/material';
 
-function HelloWorld() {
-  return <h1 className='greeting'> Hello, World</h1>;
+
+export default function HelloWorld() {
+  return (
+  <div className='content'>
+    <h1 className='title'>Hello, World!</h1>
+    <Button variant='contained' size='large' className='button'>Welcome to my App</Button>
+  </div>
+  )
+  
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
